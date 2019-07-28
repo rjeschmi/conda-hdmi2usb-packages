@@ -16,7 +16,7 @@ fi
 
 which pkg-config
 
-make config-conda-linux
+#make config-conda-linux
 echo "PREFIX := $PREFIX" >> Makefile.conf
 echo "ENABLE_READLINE := 0" >> Makefile.conf
 

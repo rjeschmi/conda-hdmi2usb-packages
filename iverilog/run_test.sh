@@ -12,7 +12,7 @@ cd test
 echo
 echo
 echo "Hello World Test ====="
-$PREFIX/bin/iverilog -v hello_world.v -o hello_world
+$PREFIX/bin/iverilog -v -o hello_world hello_world.v 
 echo "----------------------"
 cat hello_world
 echo "----------------------"
@@ -25,13 +25,13 @@ echo "----------------------"
 echo
 echo
 echo "Counter Test ========="
-iverilog -o test_counter counter_tb.v counter.v
+$PREFIX/bin/iverilog -o test_counter counter_tb.v counter.v
 echo "----------------------"
 cat test_counter
 echo "- - - - - - - - - - --"
 vvp -n test_counter
 echo "----------------------"
-iverilog -o test_counter -c counter_list.txt
+$PREFIX/bin/iverilog -o test_counter -c counter_list.txt
 echo "- - - - - - - - - - --"
 vvp -n test_counter
 echo "----------------------"
@@ -40,7 +40,7 @@ echo "----------------------"
 echo
 echo
 echo "FSM Test ============="
-iverilog -o test_fsm fsm.v
+$PREFIX/bin/iverilog -o test_fsm fsm.v
 echo "----------------------"
 cat test_fsm
 echo "----------------------"

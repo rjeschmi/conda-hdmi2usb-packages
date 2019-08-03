@@ -27,6 +27,7 @@ requirements:
     - {{ compiler('cxx') }}
     - bison
     - flex
+    - perl
   run:
     - {{ compiler('cxx') }}
   {% for package in resolved_packages('host') %}

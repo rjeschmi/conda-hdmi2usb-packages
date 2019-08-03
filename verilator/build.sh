@@ -8,7 +8,9 @@ if [ x"$TRAVIS" = xtrue ]; then
 fi
 
 unset VERILATOR_ROOT
-#ln -s /usr/bin/perl $PREFIX/bin/
+if [ x"$MACOSX_DEPLOYMENT_TARGET" = x]; then
+    ln -s /usr/bin/perl $PREFIX/bin/
+fi
 autoconf
 ./configure \
   --prefix=$PREFIX \

@@ -8,7 +8,7 @@ if [ x"$TRAVIS" = xtrue ]; then
 fi
 
 unset VERILATOR_ROOT
-ln -s /usr/bin/perl $PREFIX/bin/
+#ln -s /usr/bin/perl $PREFIX/bin/
 autoconf
 ./configure \
   --prefix=$PREFIX \

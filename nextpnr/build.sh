@@ -5,7 +5,9 @@ set -x
 
 if [ x"$TRAVIS" = xtrue ]; then
 	CPU_COUNT=2
-	cat /proc/meminfo
+    if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+	    cat /proc/meminfo
+    fi
 else
 	CPU_COUNT=$(nproc)
 fi
